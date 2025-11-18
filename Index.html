@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Prayer Book</title>
+<link rel='stylesheet' href='style.css'>
+
+</head>
+<body>
+<header>
+<div class="header-content">
+<div class="logo">
+<div class="logo-icon">
+<img src="logo.png" alt="Prayer Book Logo">
+</div>
+<span>Digital Prayer Book</span>
+</div>
+<nav class="primary-nav">
+<a href="#home" class="nav-link active">Home</a>
+</nav>
+<div class="header-controls">
+<div class="search-bar">
+<span class="search-icon">🔍</span>
+<input type="text" id="prayerSearchInput" placeholder="Search prayers..." oninput="handleSearch(this.value)" autocomplete="off">
+<button class="clear-search-btn" onclick="clearSearch()" aria-label="Clear search">✕</button>
+</div>
+<button class="fav-btn" onclick="showCategory('favorites')" title="Favorites">❤️</button>
+<button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">🌙</button>
+</div>
+</div>
+</header>
+
+<div class="container home-container">
+<!-- Home Page -->
+<div class="home-page active">
+<section class="hero-section">
+<h1>Welcome to Digital Prayer Book</h1>
+<p>Find peace and spiritual guidance through our collection of prayers</p>
+<button class="enter-btn" onclick="enterPrayerBook()">Enter</button>
+</section>
+</div>
+
+<!-- Prayers Page -->
+<div class="prayers-page">
+<button class="back-btn" onclick="goHome()">← Back to Home</button>
+<div id="categoriesView">
+<h2 style="text-align: center; margin-bottom: 30px; font-size: 32px;">Prayer Categories</h2>
+<div class="categories-grid">
+<div class="category-card" onclick="showCategory('morning')">
+<div class="category-icon"></div>
+<h3>Morning Prayers/དྲོ༌པ་གི་གསོལ་འདེབས།།</h3>
+<p>Start your day with gratitude and hope</p>
+</div>
+<div class="category-card" onclick="showCategory('evening')">
+<div class="category-icon"></div>
+<h3>Evening Prayers/ཕྱི་རུ་གི་གསོལ་འདེབས།།</h3>
+<p>Find peace as the day comes to an end</p>
+</div>
+<div class="category-card" onclick="showCategory('special')">
+<div class="category-icon"></div>
+<h3>Special Prayers/དམིགས་བསལ་གྱི་གསོལ་འདེབས།།</h3>
+<p>Prayers for special occasions and needs</p>
+</div>
+<div class="category-card" onclick="showCategory('favorites')">
+<div class="category-icon"></div>
+<h3>My Favorites</h3>
+<p>Your saved prayers collection</p>
+</div>
+</div>
+</div>
+
+<div id="prayerListView" style="display: none;">
+<button class="back-btn" onclick="backToCategories()">← Back to Categories</button>
+<h2 id="categoryTitle" style="text-align: center; margin-bottom: 30px; font-size: 32px;"></h2>
+<div class="prayer-list" id="prayerList"></div>
+</div>
+</div>
+</div>
+
+<!-- New Prayer Display Page -->
+<div class="prayer-display-page">
+<div class="prayer-display-container">
+<div class="prayer-header">
+<button class="prayer-nav-btn" onclick="backToPrayerList()">← Back to Home</button>
+<h2 class="prayer-title-header"> Morning Prayers</h2>
+<button class="prayer-nav-btn" onclick="backToCategories()">← Back to Categories</button>
+</div>
+<div class="prayer-cards-container" id="prayerCardsContainer">
+<!-- Prayer cards will be dynamically inserted here -->
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h4>About Us</h4>
+<p>Digital Prayer Book is your companion for daily spiritual practice and reflection.</p>
+</div>
+<div class="footer-section">
+<h4>Quick Links</h4>
+<a href="#home">Home</a>
+<a href="#prayers">Prayers</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="footer-section">
+<h4>Contact</h4>
+<p>Email: tsheringchodenG5@gmail.com</p>
+<p>Phone: +975 77234568</p>
+</div>
+<div class="footer-section">
+<h4>Follow Us</h4>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">Telegram</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Digital Prayer Book. All rights reserved.</p>
+</div>
+</footer>
+
+<script src='Javascript.js'></script>
+</body>
+</html>
