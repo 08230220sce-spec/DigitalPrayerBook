@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Morning Prayer 1",
+        "content": "Oh Lord, as I start my day, fill me with your light and guide my steps.",
+        "category": "morning"
+    },
+    {
+        "title": "Morning Prayer 2",
+        "content": "Thank you for the gift of a new day. Help me to use it wisely.",
+        "category": "morning"
+    },
+    {
+        "title": "Morning Prayer 3",
+        "content": "Grant me strength and wisdom for the challenges ahead.",
+        "category": "morning"
+    },
+    {
+        "title": "Evening Prayer 1",
+        "content": "As the day ends, I reflect on your blessings and seek your peace.",
+        "category": "evening"
+    },
+    {
+        "title": "Evening Prayer 2",
+        "content": "Forgive my shortcomings and renew me for tomorrow.",
+        "category": "evening"
+    },
+    {
+        "title": "Evening Prayer 3",
+        "content": "Watch over me through the night and grant me restful sleep.",
+        "category": "evening"
+    },
+    {
+        "title": "Special Prayer 1",
+        "content": "For special occasions, may your presence be felt in every moment.",
+        "category": "special"
+    },
+    {
+        "title": "Special Prayer 2",
+        "content": "In times of need, your grace sustains me.",
+        "category": "special"
+    },
+    {
+        "title": "Special Prayer 3",
+        "content": "Bless those around me and guide our paths together.",
+        "category": "special"
+    }
+]
