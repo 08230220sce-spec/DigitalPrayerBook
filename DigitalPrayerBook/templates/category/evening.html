@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evening Prayers - Digital Prayer Book</title>
+{% load static %}
+<link rel='stylesheet' href='{% static "style.css" %}'>
+</head>
+<body>
+<header>
+<div class="header-content">
+<div class="logo">
+<div class="logo-icon">
+<img src="{% static 'logo.png' %}" alt="Prayer Book Logo">
+</div>
+<span>Digital Prayer Book</span>
+</div>
+<nav class="primary-nav">
+<a href="/" class="nav-link">Home</a>
+</nav>
+<div class="header-controls">
+<div class="search-bar">
+<span class="search-icon">🔍</span>
+<input type="text" id="prayerSearchInput" placeholder="Search prayers..." oninput="handleSearch(this.value)" autocomplete="off">
+<button class="clear-search-btn" onclick="clearSearch()" aria-label="Clear search">✕</button>
+</div>
+<button class="fav-btn" onclick="window.location.href='/category/favourite.html'" title="Favorites">❤️</button>
+<button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">🌙</button>
+</div>
+</div>
+</header>
+
+<div class="prayer-display-page active">
+<div class="prayer-display-container">
+<div class="prayer-header">
+<button class="prayer-nav-btn" onclick="window.location.href='/'">← Back to Home</button>
+<h2 class="prayer-title-header">Evening Prayers/ཕྱི་རུ་གི་གསོལ་འདེབས།།</h2>
+<button class="prayer-nav-btn" onclick="window.location.href='/'">← Back to Categories</button>
+</div>
+<div class="prayer-cards-container" id="prayerCardsContainer">
+<!-- Prayer cards will be dynamically inserted here -->
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h4>About Us</h4>
+<p>Digital Prayer Book is your companion for daily spiritual practice and reflection.</p>
+</div>
+<div class="footer-section">
+<h4>Quick Links</h4>
+<a href="/">Home</a>
+<a href="/category/morning.html">Morning Prayers</a>
+<a href="/category/evening.html">Evening Prayers</a>
+<a href="/category/special.html">Special Prayers</a>
+</div>
+<div class="footer-section">
+<h4>Contact</h4>
+<p>Email: tsheringchodenG5@gmail.com</p>
+<p>Phone: +975 77234568</p>
+</div>
+<div class="footer-section">
+<h4>Follow Us</h4>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">Telegram</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Digital Prayer Book. All rights reserved.</p>
+</div>
+</footer>
+
+{% load static %}
+<script src='{% static "Javascript.js" %}'></script>
+<script>
+// Initialize evening prayers display
+document.addEventListener('DOMContentLoaded', function() {
+    showPrayerDisplayPage('evening');
+});
+</script>
+</body>
+</html>
+
